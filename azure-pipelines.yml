@@ -43,7 +43,7 @@ stages:
           - script: |
               docker run \
               -e OX_HOST_URL=$(ASOC_HOST1) \
-              -e OX_API_KEY=$(ASOC_TOKEN) \
+              -e OX_API_KEY=$(ASOC_API_KEY) \
               -e OX_DISABLE_SSL_VALIDATION=true \
               --env-file <(env | grep 'SYSTEM_\|BUILD_') \
               oxsecurity/ox-block-mode:latest
